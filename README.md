@@ -5,6 +5,11 @@ Streamlit, Pandas, NumPy, Plotly, SQLite, OpenPyXL, and ReportLab.
 
 All data is **100% fictional and synthetically generated**  no external datasets or APIs required.
 
+## 🌐 Live Demo
+
+🔗 **Streamlit App:** : https://logistics-cost-analyzer-by-mridul.streamlit.app/
+
+
 ## ✨ Features
 
 - **Dashboard** — KPI cards (shipments, cost, revenue, profit, margin, cost/km, distance, delivery time)
