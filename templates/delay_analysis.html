@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Delay Analysis | Logistics Cost Analyzer{% endblock %}
+{% block content %}
+
+<div class="app-title">⏱️ Delay Analysis</div>
+<div class="app-subtitle">Delivery delay rate, trend, and where delays concentrate</div>
+
+{% if empty %}
+<div class="callout warn">No shipments match the selected filters.</div>
+{% elif gate %}
+<div class="callout">{{ gate }}</div>
+{% else %}
+
+<div class="kpi-grid">
+  {% for label, value in kpi_list %}
+  <div class="kpi-card"><div class="kpi-label">{{ label }}</div><div class="kpi-value">{{ value }}</div></div>
+  {% endfor %}
+</div>
+
+<div class="section-header">📊 Delay Overview</div>
+<div class="chart-grid">
+  <div class="chart-card" id="chart_status_distribution"></div>
+  <div class="chart-card" id="chart_delay_trend"></div>
+</div>
+
+<div class="section-header">📍 Where Delays Concentrate</div>
+<div class="chart-grid">
+  <div class="chart-card" id="chart_route_delay"></div>
+  <div class="chart-card" id="chart_mode_delay"></div>
+</div>
+
+<details class="expander">
+  <summary>🔎 View Delayed Shipments</summary>
+  <div class="table-card" style="margin-top:8px;">
+    <table class="data-table">
+      <thead><tr>{% for c in table_cols %}<th>{{ c }}</th>{% endfor %}</tr></thead>
+      <tbody>
+        {% for row in table_rows %}
+        <tr>{% for cell in row %}<td>{{ cell }}</td>{% endfor %}</tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</details>
+
+<script id="chart-data" type="application/json">{{ chart_data|safe }}</script>
+{% endif %}
+{% endblock %}
