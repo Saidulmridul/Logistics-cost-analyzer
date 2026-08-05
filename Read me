@@ -1,0 +1,53 @@
+# Logistics Cost Analyzer
+
+A Flask-based web application that helps analyze logistics and transportation costs by processing shipment data and generating interactive visualizations. The application enables users to upload datasets, explore cost distributions, and gain insights for better logistics decision-making.
+
+## Features
+
+- Upload logistics datasets (Excel format)
+- Analyze transportation and logistics costs
+- Interactive charts and dashboards
+- Cost distribution visualization
+- Data summary and key performance indicators (KPIs)
+- User-friendly web interface
+
+## Technologies Used
+
+- Python
+- Flask
+- Pandas
+- NumPy
+- Plotly
+- OpenPyXL
+- HTML
+- CSS
+
+## Project Structure
+
+```
+logistics_cost_analyzer_webapp/
+│
+├── app.py
+├── requirements.txt
+├── Procfile
+├── Dockerfile
+├── core/
+├── static/
+├── templates/
+└── README.md
+```
+
+```bash
+python app.py
+```
+
+re.
+
+d
+- User authentication
+
+## Author
+
+**Md. Saidul Islam Mridul**
+
+- GitHub: https://github.com/Saidulmridul
