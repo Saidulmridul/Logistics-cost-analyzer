@@ -1,4 +1,4 @@
-# Logistics Cost Analyzer — Flask edition
+# Logistics Cost Analyzer
 
 This is the same app you had (upload → map columns → automatic KPIs,
 charts, insights, exports across 10 pages), rebuilt as a normal Flask web
